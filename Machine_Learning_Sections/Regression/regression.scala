@@ -33,3 +33,10 @@ val trainingSummary = lrModel.summary
 trainingSummary.residuals.show()
 trainingSummary.predictions.show()
 trainingSummary.r2 // how much variance is explained in our model, 91% is not so bad
+
+// copied over from the other file just to see what they are
+println(s"numIterations: ${trainingSummary.totalIterations}")
+println(s"objectiveHistory: ${trainingSummary.objectiveHistory.toList}")
+println(s"RMSE: ${trainingSummary.rootMeanSquaredError}")
+println(s"MSE: ${trainingSummary.meanSquaredError}")
+println(s"r2: ${trainingSummary.r2}")
